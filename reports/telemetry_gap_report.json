@@ -1,0 +1,24 @@
+{
+  "analysis_timestamp": "2025-08-14T12:15:18.051819",
+  "gaps_found": [
+    "CallApi #2: 参数名不匹配 (n vs s)",
+    "fetch_calls: 7 个潜在遥测请求未被拦截",
+    "endpoint_names: 4 个未覆盖的模式",
+    "action_names: 53 个未覆盖的模式",
+    "data_keys: 21 个未覆盖的模式"
+  ],
+  "recommendations": [
+    "扩展补丁模式以覆盖更多API调用前缀",
+    "添加对网络请求的额外拦截",
+    "增强数据载荷的敏感字段检测",
+    "考虑拦截 fetch() 和 XMLHttpRequest 调用",
+    "添加对 WebSocket 连接的监控"
+  ],
+  "current_patch_coverage": [
+    "report-* API 调用",
+    "record-* API 调用",
+    "subscription-info 查询",
+    "会话ID随机化",
+    "用户代理清空"
+  ]
+}

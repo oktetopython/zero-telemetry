@@ -448,6 +448,10 @@ class MainPage(QWidget):
         cursor.movePosition(QTextCursor.MoveOperation.End)
         self.log_text.setTextCursor(cursor)
 
+    def _append_log(self, message: str):
+        """添加日志信息 - 兼容性方法"""
+        self._add_log(message)
+
     def get_selected_ide_type(self) -> IDEType:
         """获取选中的IDE类型"""
         ide_name = self.ide_combo.currentText()

@@ -1,12 +1,8 @@
-# Byte-compiled / optimized / DLL files
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
-
-# C extensions
 *.so
-
-# Distribution / packaging
 .Python
 build/
 develop-eggs/
@@ -15,179 +11,31 @@ downloads/
 eggs/
 .eggs/
 lib/
-lib60/
+lib64/
 parts/
 sdist/
 var/
 wheels/
-pip-wheel-metadata/
-share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
 MANIFEST
 
-# PyInstaller
-#  Usually these files are written by a script go in a specific directory.
-#  See https://github.com/pyinstaller/pyinstaller/wiki/FAQ#gnulinux-i-cant-run-my-program-executables-produced-by-pyinstaller
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Version number files (pip output accidentally saved as files)
-[0-9]*.[0-9]*.[0-9]*
-[0-9]*.[0-9]*.[0-9]*'
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.log
-.hypothesis/
-.pytest_cache/
-
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-
-# Flask stuff:
-instance/
-.webassets-cache
-
-# Scrapy stuff:
-.scrapy
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-target/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# IPython
-profile_default/
-ipython_config.py
-
-# pyenv
-.python-version
-
-# PEP 582; __pypackages__ directory
-__pypackages__/
-
-# Celery stuff
-celerybeat-schedule
-celerybeat.pid
-
-# SageMath parsed files
-*.sage.py
-
-# Environments
-.env
-.venv/
-env/
+# Virtual Environment
 venv/
+env/
 ENV/
-env.bak/
-venv.bak/
+.venv/
+.env/
 
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
-
-# pytype static analyzer
-.pytype/
-
-# Cython debug symbols
-cython_debug/
-
-# ===== Project Specific =====
-
-# AI Memory and Privacy Files
-.cunzhi-memory/
-.augment/
-*.memory
-*.session
-*.cache
-
-# Build and Distribution
-build.log
-portable_temp/
-*.exe
-*.dmg
-*.AppImage
-*.deb
-*.rpm
-
-# IDE and Editor Files
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
-.DS_Store
-Thumbs.db
 
-# Configuration and Secrets
-config/user_config.json
-config/secrets.json
-*.key
-*.pem
-*.p12
-*.pfx
-api_keys.txt
-secrets.txt
-
-# User Data and Logs
-user_data/
-logs/
-*.log
-crash_reports/
-debug_*.txt
-
-# Backup Files
-*.bak
-*.backup
-*.old
-*_backup
-*_old
-
-# Temporary Files
-temp/
-tmp/
-*.tmp
-*.temp
-
-# OS Generated Files
+# OS
 .DS_Store
 .DS_Store?
 ._*
@@ -196,18 +44,20 @@ tmp/
 ehthumbs.db
 Thumbs.db
 
-# Development and Testing
-test_output/
-test_results/
-coverage_reports/
-.pytest_cache/
-.coverage
-htmlcov/
+# Project specific
+extension.js
+extension_backup_*.js
+*.log
+temp/
+tmp/
 
-# Personal Notes and Documentation
-NOTES.md
-TODO.md
-PERSONAL_*
-PRIVATE_*
-*_PRIVATE.*
-*_PERSONAL.*
+# Reports and analysis results
+*_report_*.json
+*_analysis_*.json
+patch_monitoring_report_*.json
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup

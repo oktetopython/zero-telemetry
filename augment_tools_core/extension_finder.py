@@ -163,22 +163,36 @@ class ExtensionFinder:
     def _is_valid_extension_file(self, file_path: str) -> bool:
         """验证是否为有效的扩展文件"""
         try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read(1000)  # 只读取前1000字符
+            # 首先检查文件路径是否包含 augment 关键词
+            if "augment" in file_path.lower():
+                return True
+            
+            # 检查文件大小，扩展文件通常比较大
+            file_size = os.path.getsize(file_path)
+            if file_size > 100000:  # 大于100KB的JS文件很可能是扩展文件
+                return True
+            
+            # 读取文件内容进行关键词检查
+            with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+                content = f.read(2000)  # 读取更多内容
                 
-            # 检查是否包含关键标识
+            # 检查是否包含关键标识（包括压缩后的可能形式）
             indicators = [
-                "callApi",
-                "augment",
+                "callapi",
+                "augment", 
                 "extension",
                 "vscode",
-                "activate"
+                "activate",
+                "exports",
+                "require",
+                "module"
             ]
             
             return any(indicator in content.lower() for indicator in indicators)
             
         except Exception:
-            return False
+            # 如果读取失败，但文件路径包含关键词，仍然认为有效
+            return "augment" in file_path.lower() and file_path.endswith(".js")
     
     def find_all_extensions(self, portable_roots: Optional[Dict[IDEType, str]] = None) -> Dict[IDEType, List[str]]:
         """查找所有支持的IDE的扩展文件"""
